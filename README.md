@@ -54,7 +54,7 @@ dataset/
 ## 🚀 Huấn luyện
 
 ```bash
-python train.py --data_dir dataset --epochs 20 --batch_size 32 --lr 0.001
+python train.py --data_dir dataset --epochs 20 --batch_size 32 
 ```
 
 Các tham số:
