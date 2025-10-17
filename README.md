@@ -64,6 +64,8 @@ Các tham số:
 - `--batch_size`: batch size
 - `--logging`: nơi lưu TensorBoard (mặc định `tensorboard/`)
 - `--trained_models`: thư mục lưu checkpoint (mặc định `trained_models/`)
+<img width="933" height="444" alt="image" src="https://github.com/user-attachments/assets/30d84a3b-00d3-4bd9-9cb3-316aa75efcca" />
+<img width="586" height="391" alt="image" src="https://github.com/user-attachments/assets/4d2b0faa-ce42-49c3-ab6d-6d2819cf9156" />
 
 Xem log bằng TensorBoard:
 
@@ -100,6 +102,8 @@ Ví dụ confusion matrix:
 [[50   2]
  [ 5  43]]
 ```
+<img width="800" height="800" alt="imageData" src="https://github.com/user-attachments/assets/29d584d1-5093-4df2-acb1-a4483bc0e86d" />
+
 
 ---
 
