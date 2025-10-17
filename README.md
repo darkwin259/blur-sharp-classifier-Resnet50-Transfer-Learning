@@ -1,10 +1,8 @@
-# blur-sharp-classifier-Resnet50-Transfer-Learning
+# Blur-sharp-classifier-Resnet50-Transfer-Learning
 A PyTorch-based transfer learning project using ResNet50 to classify images into Blur and Sharp categories.  The model is trained with custom datasets, supports TensorBoard logging, and includes scripts for both training  and inference. This repository demonstrates practical transfer learning for image quality classification.
-# Blur vs Sharp Image Classification
-
-Sử dụng ResNet50 để phân loại ảnh thành **Blur** hoặc **Sharp**.  
+Sử dụng ResNet50-backborn để phân loại ảnh thành **Blur** hoặc **Sharp**.  
 Hệ thống gồm 2 phần chính:
-- `train.py`: script huấn luyện, log TensorBoard, tính confusion matrix.
+- `train.py`: script huấn luyện, log TensorBoard, tính confusion matrix, lưu best/last model.
 - `test.py`: script dự đoán ảnh đơn.
 
 ---
@@ -39,7 +37,7 @@ pip install -r requirements.txt
 
 ## 📊 Dataset
 
-Dataset cần ở dạng **ImageFolder**: dd_dp_dataset_canon 
+Dataset cần ở dạng **ImageFolder**: Ở đây tôi sử dụng bô dataset : dd_dp_dataset_canon 
 
 ```
 dataset/
@@ -60,12 +58,12 @@ python train.py --data_dir dataset --epochs 20 --batch_size 32 --lr 0.001
 ```
 
 Các tham số:
-- `--data_dir`: đường dẫn dataset
+- `--train_root`: đường dẫn dataset
+- `--val_root`: số epoch
 - `--epochs`: số epoch
 - `--batch_size`: batch size
-- `--lr`: learning rate
-- `--log_dir`: nơi lưu TensorBoard (mặc định `tensorboard/`)
-- `--save_dir`: thư mục lưu checkpoint (mặc định `trained_models/`)
+- `--logging`: nơi lưu TensorBoard (mặc định `tensorboard/`)
+- `--trained_models`: thư mục lưu checkpoint (mặc định `trained_models/`)
 
 Xem log bằng TensorBoard:
 
@@ -110,5 +108,3 @@ Xem chi tiết trong [requirements.txt](requirements.txt).
 
 ---
 
-## 📝 License
-MIT License
